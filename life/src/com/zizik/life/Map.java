@@ -79,6 +79,7 @@ public class Map {
 		font.draw(batch, "New-born: "+this.newborn, 410, Gdx.graphics.getHeight()-10);	
 		font.draw(batch, "Generation: "+this.generation, 510, Gdx.graphics.getHeight()-10);	
 		font.draw(batch, "Clear", 610, Gdx.graphics.getHeight()-10);	
+		font.draw(batch, "Exit", Gdx.graphics.getWidth()-50, Gdx.graphics.getHeight()-10);	
 		batch.end();
 		
 	}

@@ -60,7 +60,8 @@ public class Life implements ApplicationListener, InputProcessor {
 
 	@Override
 	public void render() {		
-		Gdx.gl.glClearColor(0, 0.1f, 0, 0.2f);
+		Gdx.gl.glClearColor(1, 1, 1, 1);
+		
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		if (Gdx.input.justTouched()) {
 			map.changeState(Gdx.input.getX(), Gdx.graphics.getHeight()-Gdx.input.getY());
@@ -76,6 +77,9 @@ public class Life implements ApplicationListener, InputProcessor {
 			}
 			if (Gdx.input.getX()<180&&Gdx.input.getX()>160&&Gdx.input.getY()<30) {
 				if (map.getDeltaTime()>1000) {map.setDeltaTime(map.getDeltaTime()-1000);}
+			}
+			if (Gdx.input.getX()<Gdx.graphics.getWidth()&&Gdx.input.getX()>Gdx.graphics.getWidth()-60&&Gdx.input.getY()<30) {
+				Gdx.app.exit();
 			}
 			System.out.println(Gdx.input.getX());
 		}
